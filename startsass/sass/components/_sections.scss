@@ -1,21 +1,22 @@
 //login page
-
 html,
 body {
-	background-color: #b3b3b3;
+	// background-color: #b3b3b3; grey standard color
 	height: 100%;
 	width: 100%;
-
+	//add this gradient code to a mixin
+	background: $primary-color; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($dark-blue, $primary-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($dark-blue, $primary-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($dark-blue, $primary-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($dark-blue, $primary-color); /* Standard syntax */
 	#login_container {
-		// background-color: #ffffff;
-		// margin: 0 auto;
 		margin: auto;
   		position: absolute;
   		top: 0; left: 0; bottom: 0; right: 0;
 		box-shadow: 0 0 3em #000000; //maybe play around with this more
 		height: 30%;
 		width: 75%;
-
 		img {
 			height: 100%;
 			width: 55%;
@@ -23,31 +24,29 @@ body {
 			image-rendering: crisp-edges;
   			image-rendering: pixelated;
   			background-size: cover;
-
-
-		}
+  		}
 		#submit_container {
-			background-color: $light-blue;
+			background-color: $dark-blue;
 			height: 100%;
 			width: 15%;
 			float: right;
 		}
 		#login {
-			background-color: $dark-blue;
+			background-color: $primary-color;
 			height: 100%;
 			width: 30%;
 			float: right;
 			input.form-control {
 				width: 80%;
 				margin:0 2em 2em 2em;
+				background-color: $light-blue;
 			}
 		}
-		
 	}
 }
 
 p {
-	color: $primary-color;
+	color: $accent-color;
 	font-size: 2.5em;
 	margin: 0;
 }
