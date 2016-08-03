@@ -4,14 +4,7 @@ body {
 	// background-color: #b3b3b3; grey standard color
 	height: 100%;
 	width: 100%;
-	// background:url(https://hd.unsplash.com/photo-1455735459330-969b65c65b1c);
-	// add this gradient code to a mixin
-	 // background: red; /* For browsers that do not support gradients */
-  // background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
-  // background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
-  // background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
-  background: linear-gradient(rgba(1,61,121,1), rgba(255,255,255,0.4)), url(https://hd.unsplash.com/photo-1455735459330-969b65c65b1c); /*Standard*/
-
+	background: linear-gradient(rgba(1,61,121,1), rgba(0, 113, 179, 0.9), rgba(91, 178, 213, 0.9), rgba(255,255,255,0.4)), url(https://hd.unsplash.com/photo-1455735459330-969b65c65b1c); 
 	#login_container {
 		margin: auto;
   		position: absolute;
@@ -22,13 +15,12 @@ body {
 		img {
 			height: 100%;
 			width: 55%;
-			image-rendering: auto;
-			image-rendering: crisp-edges;
-  			image-rendering: pixelated;
-  			// background-size: cover;
+			-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    		// filter: grayscale(100%);
+ 			object-fit: cover;
   		}
 		#submit_container {
-			background-color: $dark-blue;
+			background-color: $accent-color;
 			height: 100%;
 			width: 15%;
 			float: right;
@@ -41,7 +33,8 @@ body {
 			input.form-control {
 				width: 80%;
 				margin:0 2em 2em 2em;
-				background-color: $light-blue;
+				background-color: $grey-color;
+				color: white;
 			}
 		}
 	}
@@ -54,12 +47,32 @@ p {
 }
 
 button.btn.btn-primary {
-	background-color: $primary-color;
-	border-color: $primary-color;
-	color: $dark-blue;
+	background-color: $grey-color;
+	border-color: $grey-color;
+	color: $primary-color;
 	float: none;
 	text-align: center;
 }
+
+header {
+	width: 100%;
+	height: 2em;
+	background-color: $accent-color;
+}
+
+#diagonal_nav {
+	height: 2em;
+	width: 100%;
+	background:repeating-linear-gradient(
+		135deg,
+  		rgba(0, 113, 179, 0.9),
+  		rgba(0, 113, 179, 0.9) 20px,
+  		$grey-color 20px,
+  		$grey-color 30px
+  	)
+}
+
+
 
 
 
