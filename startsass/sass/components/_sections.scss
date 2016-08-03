@@ -4,12 +4,14 @@ body {
 	// background-color: #b3b3b3; grey standard color
 	height: 100%;
 	width: 100%;
-	//add this gradient code to a mixin
-	background: $primary-color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($dark-blue, $primary-color); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($dark-blue, $primary-color); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($dark-blue, $primary-color); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($dark-blue, $primary-color); /* Standard syntax */
+	// background:url(https://hd.unsplash.com/photo-1455735459330-969b65c65b1c);
+	// add this gradient code to a mixin
+	 // background: red; /* For browsers that do not support gradients */
+  // background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+  // background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+  // background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+  background: linear-gradient(rgba(1,61,121,1), rgba(255,255,255,0.4)), url(https://hd.unsplash.com/photo-1455735459330-969b65c65b1c); /*Standard*/
+
 	#login_container {
 		margin: auto;
   		position: absolute;
@@ -23,7 +25,7 @@ body {
 			image-rendering: auto;
 			image-rendering: crisp-edges;
   			image-rendering: pixelated;
-  			background-size: cover;
+  			// background-size: cover;
   		}
 		#submit_container {
 			background-color: $dark-blue;
